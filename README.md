@@ -1,2 +1,2 @@
-# JsSiteTemplate
-This a Starter JS Template for All JavaScript projects 
+# Rewind
+A JavaScript challenge using arrays. A program the displays a string in reverse
