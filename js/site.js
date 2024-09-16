@@ -1,45 +1,32 @@
-const  startValue = document.getElementById("startValue");
-const endValue = document.getElementById("endValue");
+const userInput = document.getElementById("userString");
 const btn = document.getElementById("btnSubmit");
-const result = document.getElementById("results");
+const alertBox = document.getElementById("alert");
+const message = document.getElementById("message");
 
-btn.addEventListener("click", displayValues);
+btn.addEventListener("click", displayReverseString);
 
-
-function getValues()
+function getUserSring()
 {
-  let start = startValue.value;
-  let end = endValue.value;
+  let userString = userInput.value;
+  let stringArray = [];
 
-  // Convert to integers
-  start = parseInt(start);
-  end = parseInt(end);
-
-  let valuesRange = [];
-
-  for (let i = start; i <= end; i++)
+  for (let i = 0; i < userString.length; i ++)
   {
-    valuesRange.push(i);
+    stringArray.push(userString[i]);
   }
 
-  return valuesRange;
+  return stringArray;
 }
 
-
-function displayValues()
+function displayReverseString()
 {
-  let numbers = getValues();
+  let array = getUserSring();
 
-  let className = "";
+  alertBox.classList.remove("invisible");
 
-  for (let i = 0; i < numbers.length; i++)
+  for (let i = array.length - 1; i >= 0; i-- )
   {
-    if (numbers[i] % 2 == 0)
-    {
-      className = "even";
-    } else {
-      className = "odd";
-    }
-    result.innerHTML += `<tr><td class="${className}">${numbers[i]}</td></tr>`;
+    message.innerText += array[i];
   }
+
 }

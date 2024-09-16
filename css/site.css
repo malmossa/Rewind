@@ -77,3 +77,11 @@ pre[class*="language-"] {
 main > .container {
   padding: 60px 15px 0;
 }
+
+/* Custom CSS for this App */
+.message {
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
