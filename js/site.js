@@ -24,9 +24,14 @@ function displayReverseString()
 
   alertBox.classList.remove("invisible");
 
+  // Clear the previous message
+  message.innerText = '';
+
   for (let i = array.length - 1; i >= 0; i-- )
   {
     message.innerText += array[i];
   }
 
+  // Clear the input field for new input
+  userInput.value = "";
 }
